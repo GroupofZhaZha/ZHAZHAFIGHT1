@@ -429,7 +429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 438.25342, y: -768.3185}
+  m_AnchoredPosition: {x: 438.25342, y: -834.5685}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424745358
@@ -552,7 +552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 438.25342, y: -663.3185}
+  m_AnchoredPosition: {x: 438.25342, y: -729.5685}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880444695
@@ -824,8 +824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 438.25342, y: -173.31848}
-  m_SizeDelta: {x: 876.50684, y: 346.63696}
+  m_AnchoredPosition: {x: 438.25342, y: -82.06848}
+  m_SizeDelta: {x: 876.50684, y: 164.13696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1588528195
 AudioSource:
@@ -956,7 +956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 438.25342, y: -558.3185}
+  m_AnchoredPosition: {x: 438.25342, y: -624.5685}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657324550
@@ -1159,8 +1159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 438.25342, y: -757.45544}
-  m_SizeDelta: {x: 876.50684, y: 821.63696}
+  m_AnchoredPosition: {x: 438.25342, y: -666.20544}
+  m_SizeDelta: {x: 876.50684, y: 1004.13696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772675616
 MonoBehaviour:
@@ -1222,14 +1222,14 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 400
-    m_Bottom: 0
+    m_Bottom: 50
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 150, y: 75}
   m_Spacing: {x: 0, y: 30}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 1
 --- !u!95 &1772675620
 Animator:
   serializedVersion: 3
@@ -1432,7 +1432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 438.25342, y: -453.31848}
+  m_AnchoredPosition: {x: 438.25342, y: -519.5685}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111382615

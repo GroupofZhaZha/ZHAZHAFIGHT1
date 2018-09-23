@@ -30,6 +30,19 @@ public class ButtonHandler : MonoBehaviour {
         Application.Quit();
     }
 
+    public void MyMonsterButtonHandler()
+    {
+        SceneManager.LoadScene("MyMonsters");
+    }
 
+    public void WildMonsterButtonHandler()
+    {
+        SceneManager.LoadScene("WildMonsters");
+    }
+
+    public void BOTButtonHandler()
+    {
+        SceneManager.LoadScene("BOT");
+    }
 
 }

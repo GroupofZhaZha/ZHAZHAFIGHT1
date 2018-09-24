@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 92786353}
   - component: {fileID: 92786352}
   - component: {fileID: 92786354}
+  - component: {fileID: 92786356}
+  - component: {fileID: 92786355}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -333,6 +335,31 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &92786355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92786345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2125a33dd3217044fb0914a56513f40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: {fileID: 0}
+  Music: {fileID: 1588528195}
+--- !u!114 &92786356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92786345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e14359b83c0ff34599919bfac59032d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DontDestroyOnLoad: 1
 --- !u!1 &176409820
 GameObject:
   m_ObjectHideFlags: 0

@@ -1127,6 +1127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733178079}
   - component: {fileID: 1733178080}
+  - component: {fileID: 1733178081}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1203,6 +1204,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1733178081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733178078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021ff7ac0e505b440bcaef4a8004691d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: {fileID: 0}
 --- !u!1 &1762203664
 GameObject:
   m_ObjectHideFlags: 0

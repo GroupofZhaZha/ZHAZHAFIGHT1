@@ -11,13 +11,13 @@ public class moneyManager : MonoBehaviour {
 	void Start () {
         totalMoney = PlayerPrefs.GetInt("totalMoney");
 
-        moneyText.text = "                             Gold : "+totalMoney.ToString();
+        moneyText.text = "Gold : "+totalMoney.ToString();
         print(PlayerPrefs.GetInt("totalMoney"));
     }
 	
 	// Update is called once per frame
 	void Update () {
         totalMoney = PlayerPrefs.GetInt("totalMoney");
-        moneyText.text = "                             Gold : " + totalMoney.ToString();
+        moneyText.text = "Gold : " + totalMoney.ToString();
     }
 }

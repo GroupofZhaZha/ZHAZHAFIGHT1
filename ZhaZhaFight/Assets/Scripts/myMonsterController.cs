@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+using UnityEditor;
 
 public class myMonsterController : MonoBehaviour {
 
@@ -11,6 +13,8 @@ public class myMonsterController : MonoBehaviour {
     public Sprite firstImage;
     public Sprite secondImage;
     public Sprite thirdImage;
+
+    public Sprite blinkImage;
 
     public List<Image> list;
 
@@ -27,6 +31,7 @@ public class myMonsterController : MonoBehaviour {
     public Text armor;
     public Text price;
 
+    public int currentLocation;
     void Start () {
         list = new List<Image>();
         list.Add(img1);
@@ -35,6 +40,15 @@ public class myMonsterController : MonoBehaviour {
         list.Add(img4);
         list.Add(img5);
         list.Add(img6);
+
+        list[0].sprite = blinkImage;
+        list[1].sprite = blinkImage;
+        list[2].sprite = blinkImage;
+        list[3].sprite = blinkImage;
+        list[4].sprite = blinkImage;
+        list[5].sprite = blinkImage;
+
+        currentLocation = -1;
 
         myMonster = new List<Monster>();
         TextAsset monstertext = Resources.Load("ownList", typeof(TextAsset)) as TextAsset;
@@ -45,7 +59,7 @@ public class myMonsterController : MonoBehaviour {
         {
             string[] row = data[i].Split(',');
 
-            if (row[0] != "")
+            if (row[0]!="")
             {
                 Monster m = new Monster(0, null, 0, 0, 0, 0, 0);
                 int.TryParse(row[0], out m.id);
@@ -82,6 +96,7 @@ public class myMonsterController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
     }
    
     void insertImg(Image i,Sprite s)
@@ -100,6 +115,7 @@ public class myMonsterController : MonoBehaviour {
             armor.text = "Armor : " + currentMonster.armor.ToString();
             price.text = "Price : " + currentMonster.price.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
+            currentLocation = 0;
         }
     }
     public void checkInformationButton2()
@@ -113,6 +129,7 @@ public class myMonsterController : MonoBehaviour {
             armor.text = "Armor : " + currentMonster.armor.ToString();
             price.text = "Price : " + currentMonster.price.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
+            currentLocation = 1;
         }
     }
     public void checkInformationButton3()
@@ -126,6 +143,7 @@ public class myMonsterController : MonoBehaviour {
             armor.text = "Armor : " + currentMonster.armor.ToString();
             price.text = "Price : " + currentMonster.price.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
+            currentLocation = 2;
         }
     }
     public void checkInformationButton4()
@@ -139,6 +157,7 @@ public class myMonsterController : MonoBehaviour {
             armor.text = "Armor : " + currentMonster.armor.ToString();
             price.text = "Price : " + currentMonster.price.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
+            currentLocation = 3;
         }
     }
     public void checkInformationButton5()
@@ -152,6 +171,7 @@ public class myMonsterController : MonoBehaviour {
             armor.text = "Armor : " + currentMonster.armor.ToString();
             price.text = "Price : " + currentMonster.price.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
+            currentLocation = 4;
         }
     }
     public void checkInformationButton6()
@@ -165,7 +185,63 @@ public class myMonsterController : MonoBehaviour {
             armor.text = "Armor : " + currentMonster.armor.ToString();
             price.text = "Price : " + currentMonster.price.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
+            currentLocation = 5;
         }
+    }
+
+    public void sellMonsterButton()
+    {
+        if (currentLocation == -1) {
+            Debug.Log("Repeat Sell");
+        }
+        else
+        {
+            int money = PlayerPrefs.GetInt("totalMoney") + myMonster[currentLocation].price;
+            PlayerPrefs.SetInt("totalMoney", money);
+            string[] s = File.ReadAllLines("Assets/Resources/ownList.txt");
+            string[] sub = new string[s.Length - 1];
+            for (int i = 0; i < s.Length; ++i)
+            {
+                if (i < currentLocation)
+                {
+                    sub[i] = s[i];
+                }
+                else if (i > currentLocation)
+                {
+                    sub[i - 1] = s[i];
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            File.WriteAllLines("Assets/Resources/ownList.txt", sub);
+
+            AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
+
+            for (int i = currentLocation; i < myMonster.Count-1; i++)
+            {
+                Monster x = myMonster[i+1];
+                if (x.monsterName == "Green")
+                {
+                    list[i].sprite = firstImage;
+                }
+                else if (x.monsterName == "Blue")
+                {
+                    list[i].sprite = secondImage;
+                }
+                else if (x.monsterName == "Red")
+                {
+                    list[i].sprite = thirdImage;
+                }
+            }
+            list[myMonster.Count - 1].sprite = blinkImage;
+            myMonster.Remove(myMonster[currentLocation]);
+
+            currentLocation = -1;
+        }
+
     }
 
 }

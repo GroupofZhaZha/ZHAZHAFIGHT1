@@ -109,6 +109,11 @@ public class wildMonsterController : MonoBehaviour {
             gb.SetActive(true);
             AlertText.text = "No enough Money!!!!!";
         }
+        else if (ownList.Count == 6)
+        {
+            gb.SetActive(true);
+            AlertText.text = "Your Monster is Full!!!!!";
+        }
         else
         {
             PlayerPrefs.SetInt("totalMoney", totalMoney);

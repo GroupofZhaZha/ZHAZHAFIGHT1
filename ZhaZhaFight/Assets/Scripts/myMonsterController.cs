@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEditor;
-
+using UnityEngine.SceneManagement;
 public class myMonsterController : MonoBehaviour {
 
     // Use this for initialization
@@ -30,9 +30,19 @@ public class myMonsterController : MonoBehaviour {
     public Text health;
     public Text armor;
     public Text price;
+   
+    public Text gold;
+    public int currentMoney;
+    public float timeLeft;
+    public int hp;
 
     public int currentLocation;
     void Start () {
+        currentMoney = PlayerPrefs.GetInt("gold");
+        timeLeft = PlayerPrefs.GetFloat("time");
+        hp = PlayerPrefs.GetInt("hp");
+
+        gold.text = "Gold : " + currentMoney.ToString();
         list = new List<Image>();
         list.Add(img1);
         list.Add(img2);
@@ -96,9 +106,15 @@ public class myMonsterController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        timeLeft -= Time.deltaTime;
+        if (timeLeft <= 0f)
+        {
+            SceneManager.LoadScene("Game");
+            PlayerPrefs.SetFloat("time", timeLeft);
+        }
     }
-   
+
+
     void insertImg(Image i,Sprite s)
     {
         i.sprite = s;
@@ -196,8 +212,10 @@ public class myMonsterController : MonoBehaviour {
         }
         else
         {
-            int money = PlayerPrefs.GetInt("totalMoney") + myMonster[currentLocation].price;
-            PlayerPrefs.SetInt("totalMoney", money);
+            int money = PlayerPrefs.GetInt("gold") + myMonster[currentLocation].price;
+            currentMoney = money;
+            PlayerPrefs.SetInt("gold", money);
+            gold.text = "Gold : " + PlayerPrefs.GetInt("gold");
             string[] s = File.ReadAllLines("Assets/Resources/ownList.txt");
             string[] sub = new string[s.Length - 1];
             for (int i = 0; i < s.Length; ++i)
@@ -242,6 +260,11 @@ public class myMonsterController : MonoBehaviour {
             currentLocation = -1;
         }
 
+    }
+    public void BackToGame(){
+        PlayerPrefs.SetInt("gold", currentMoney);
+        PlayerPrefs.SetFloat("time", timeLeft);
+        PlayerPrefs.SetInt("hp", hp);
     }
 
 }

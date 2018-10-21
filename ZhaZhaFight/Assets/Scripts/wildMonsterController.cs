@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 public class wildMonsterController : MonoBehaviour {
 
     public Text monsterName;
@@ -21,12 +22,21 @@ public class wildMonsterController : MonoBehaviour {
     public GameObject gb;
     public Text AlertText;
 
+    public Text goldText;
+    public Text timeText;
+    public Text hpText;
+    public float timeLeft;
+    public int currentMoney;
+    public int hp;
+
     public static List<Monster> ownList; //After catch the monster the monster will add to this list, In the beginning is empty;
     public int currentId;
+
 
     void Start()
     {
         currentId = PlayerPrefs.GetInt("currentId");
+        hp = PlayerPrefs.GetInt("hp");
         list = new List<Monster>();
         ownList = new List<Monster>();
         TextAsset monstertext = Resources.Load("monster", typeof(TextAsset)) as TextAsset;
@@ -51,8 +61,23 @@ public class wildMonsterController : MonoBehaviour {
         }
 
         gb.SetActive(false);
+
+        timeText.text = "Time : "+PlayerPrefs.GetFloat("time").ToString("f0")+"s";
+        goldText.text = "Gold : "+PlayerPrefs.GetInt("gold").ToString();
+        hpText.text = "HP : "+PlayerPrefs.GetInt("hp").ToString();
+
+        timeLeft = PlayerPrefs.GetFloat("time");
+        currentMoney = PlayerPrefs.GetInt("gold");
     }
     void Update () {
+
+        timeLeft -= Time.deltaTime;
+        if(timeLeft<=0f){
+            PlayerPrefs.SetFloat("time", timeLeft);
+            SceneManager.LoadScene("Game");
+        }
+        timeText.text = "Time : " + timeLeft.ToString("f0")+"s";
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if(Physics.Raycast(ray,out hit))
@@ -103,7 +128,7 @@ public class wildMonsterController : MonoBehaviour {
     public void catchListener()
     {
 
-        int totalMoney = PlayerPrefs.GetInt("totalMoney") - currentMonster.price;
+        int totalMoney = PlayerPrefs.GetInt("gold") - currentMonster.price;
 
         if (totalMoney < 0)
         {
@@ -117,13 +142,15 @@ public class wildMonsterController : MonoBehaviour {
         }
         else
         {
-            PlayerPrefs.SetInt("totalMoney", totalMoney);
+            PlayerPrefs.SetInt("gold", totalMoney);
+            goldText.text = "Gold : " + totalMoney.ToString();
             ownList.Add(currentMonster);
             writeData();
             currentId++;
             PlayerPrefs.SetInt("currentId", currentId);
             gb.SetActive(true);
             AlertText.text = "Catch Successful";
+            currentMoney = totalMoney;
 
         }
 
@@ -145,4 +172,10 @@ public class wildMonsterController : MonoBehaviour {
         Debug.Log(asset.text);
     }
 
+    public void backToGamePanel(){
+        PlayerPrefs.SetFloat("time",timeLeft);
+        PlayerPrefs.SetInt("gold", currentMoney);
+        PlayerPrefs.SetInt("hp", hp);
+
+    }
 }

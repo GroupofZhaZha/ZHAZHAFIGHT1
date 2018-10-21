@@ -6,13 +6,20 @@ using UnityEngine.SceneManagement;
 public class TimerCounter : MonoBehaviour {
     
     public  Text timerDisplay;
-    public float timeLeft;
+    public Text gold;
+    public Text hp;
+
+    public float timeLeft; 
+
     public bool isPause = false;
 	// Use this for initialization
 	void Start () {
-        
+
+        gold.text = "Gold:"+PlayerPrefs.GetInt("gold").ToString();
+        hp.text = "HP:" + PlayerPrefs.GetInt("hp").ToString();
 
         timeLeft = PlayerPrefs.GetFloat("time");
+        timerDisplay.text = "Time: " + timeLeft.ToString("f0") + "s";
 	}
   
     public void setPause(){

@@ -12,6 +12,7 @@ public class ButtonHandler : MonoBehaviour {
         PlayerPrefs.SetInt("hp", 30);
         PlayerPrefs.SetFloat("time", 30f);
         PlayerPrefs.SetInt("gold", 1000);
+        PlayerPrefs.SetInt("currentId", 0);
         SceneManager.LoadScene("Game");
     }
     public void backToGameScene(){

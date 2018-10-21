@@ -23,6 +23,7 @@ public class wildMonsterController : MonoBehaviour {
 
     public static List<Monster> ownList; //After catch the monster the monster will add to this list, In the beginning is empty;
     public int currentId;
+
     void Start()
     {
         currentId = PlayerPrefs.GetInt("currentId");
@@ -121,6 +122,9 @@ public class wildMonsterController : MonoBehaviour {
             writeData();
             currentId++;
             PlayerPrefs.SetInt("currentId", currentId);
+            gb.SetActive(true);
+            AlertText.text = "Catch Successful";
+
         }
 
 

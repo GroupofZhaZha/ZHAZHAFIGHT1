@@ -20,7 +20,12 @@ public class myMonsterController : MonoBehaviour {
     public Image img4;
     public Image img5;
     public Image img6;
-
+    public Text n;
+    public Text level;
+    public Text damage;
+    public Text health;
+    public Text armor;
+    public Text price;
 
     void Start () {
         list = new List<Image>();
@@ -79,4 +84,88 @@ public class myMonsterController : MonoBehaviour {
     void Update () {
     }
    
+    void insertImg(Image i,Sprite s)
+    {
+        i.sprite = s;
+    }
+    
+    public void checkInformationButton1()
+    {
+        if (myMonster.Count > 0)
+        {
+            Monster currentMonster = myMonster[0];
+            n.text = "Name : " + currentMonster.monsterName;
+            level.text = "Lv : " + currentMonster.level.ToString();
+            damage.text = "Damage : " + currentMonster.damage.ToString();
+            armor.text = "Armor : " + currentMonster.armor.ToString();
+            price.text = "Price : " + currentMonster.price.ToString();
+            health.text = "Health: " + currentMonster.health.ToString();
+        }
+    }
+    public void checkInformationButton2()
+    {
+        if (myMonster.Count > 1)
+        {
+            Monster currentMonster = myMonster[1];
+            n.text = "Name : " + currentMonster.monsterName;
+            level.text = "Lv : " + currentMonster.level.ToString();
+            damage.text = "Damage : " + currentMonster.damage.ToString();
+            armor.text = "Armor : " + currentMonster.armor.ToString();
+            price.text = "Price : " + currentMonster.price.ToString();
+            health.text = "Health: " + currentMonster.health.ToString();
+        }
+    }
+    public void checkInformationButton3()
+    {
+        if (myMonster.Count > 2)
+        {
+            Monster currentMonster = myMonster[2];
+            n.text = "Name : " + currentMonster.monsterName;
+            level.text = "Lv : " + currentMonster.level.ToString();
+            damage.text = "Damage : " + currentMonster.damage.ToString();
+            armor.text = "Armor : " + currentMonster.armor.ToString();
+            price.text = "Price : " + currentMonster.price.ToString();
+            health.text = "Health: " + currentMonster.health.ToString();
+        }
+    }
+    public void checkInformationButton4()
+    {
+        if (myMonster.Count > 3)
+        {
+            Monster currentMonster = myMonster[3];
+            n.text = "Name : " + currentMonster.monsterName;
+            level.text = "Lv : " + currentMonster.level.ToString();
+            damage.text = "Damage : " + currentMonster.damage.ToString();
+            armor.text = "Armor : " + currentMonster.armor.ToString();
+            price.text = "Price : " + currentMonster.price.ToString();
+            health.text = "Health: " + currentMonster.health.ToString();
+        }
+    }
+    public void checkInformationButton5()
+    {
+        if (myMonster.Count > 4)
+        {
+            Monster currentMonster = myMonster[4];
+            n.text = "Name : " + currentMonster.monsterName;
+            level.text = "Lv : " + currentMonster.level.ToString();
+            damage.text = "Damage : " + currentMonster.damage.ToString();
+            armor.text = "Armor : " + currentMonster.armor.ToString();
+            price.text = "Price : " + currentMonster.price.ToString();
+            health.text = "Health: " + currentMonster.health.ToString();
+        }
+    }
+    public void checkInformationButton6()
+    {
+        if (myMonster.Count > 5)
+        {
+            Monster currentMonster = myMonster[5];
+            n.text = "Name : " + currentMonster.monsterName;
+            level.text = "Lv : " + currentMonster.level.ToString();
+            damage.text = "Damage : " + currentMonster.damage.ToString();
+            armor.text = "Armor : " + currentMonster.armor.ToString();
+            price.text = "Price : " + currentMonster.price.ToString();
+            health.text = "Health: " + currentMonster.health.ToString();
+        }
+    }
+
 }

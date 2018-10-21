@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
+using System.IO;
 
 public class ButtonHandler : MonoBehaviour {
 
@@ -14,6 +16,11 @@ public class ButtonHandler : MonoBehaviour {
         PlayerPrefs.SetInt("gold", 1000);
         PlayerPrefs.SetInt("currentId", 0);
         SceneManager.LoadScene("Game");
+
+        string[] s = new string[0];
+        File.WriteAllLines("Assets/Resources/ownList.txt", s);
+        AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
+
     }
     public void backToGameScene(){
         SceneManager.LoadScene("Game");

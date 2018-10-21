@@ -176,6 +176,7 @@ public class wildMonsterController : MonoBehaviour {
         PlayerPrefs.SetFloat("time",timeLeft);
         PlayerPrefs.SetInt("gold", currentMoney);
         PlayerPrefs.SetInt("hp", hp);
+        SceneManager.LoadScene("Game");
 
     }
 }

@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Music
+  - monster2
+  - monster1
+  - monster3
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 

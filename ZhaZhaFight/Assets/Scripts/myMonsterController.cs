@@ -13,6 +13,8 @@ public class myMonsterController : MonoBehaviour {
     public Sprite firstImage;
     public Sprite secondImage;
     public Sprite thirdImage;
+    public Sprite fourthImage;
+    public Sprite fifthImage;
 
     public Sprite blinkImage;
 
@@ -252,6 +254,12 @@ public class myMonsterController : MonoBehaviour {
                 else if (x.monsterName == "Red")
                 {
                     list[i].sprite = thirdImage;
+                }
+                else if (x.monsterName == "Duoyu"){
+                    list[i].sprite = fourthImage;
+                }
+                else if (x.monsterName == "Pocky"){
+                    list[i].sprite = fifthImage;
                 }
             }
             list[myMonster.Count - 1].sprite = blinkImage;

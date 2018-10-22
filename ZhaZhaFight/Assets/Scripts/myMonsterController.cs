@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEditor;
 using UnityEngine.SceneManagement;
+
+
 public class myMonsterController : MonoBehaviour {
 
     // Use this for initialization
@@ -265,6 +267,7 @@ public class myMonsterController : MonoBehaviour {
         PlayerPrefs.SetInt("gold", currentMoney);
         PlayerPrefs.SetFloat("time", timeLeft);
         PlayerPrefs.SetInt("hp", hp);
+
     }
 
 }

@@ -428,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 393.13843, y: -983.67017}
+  m_AnchoredPosition: {x: 402.86194, y: -967.9535}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424745358
@@ -551,7 +551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 393.13843, y: -878.67017}
+  m_AnchoredPosition: {x: 402.86194, y: -862.9535}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880444695
@@ -801,9 +801,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382124292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8454fa7515965b44be3603b2837a9a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 64ce1373628194994bf6c57e63cb2373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: 
+  hp: 0
+  time: 0
+  gold: 0
 --- !u!1 &1384535793
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 393.13843, y: -773.67017}
+  m_AnchoredPosition: {x: 402.86194, y: -757.9535}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657324550
@@ -1191,8 +1195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 393.13843, y: -651.17017}
-  m_SizeDelta: {x: 786.27686, y: 1302.3403}
+  m_AnchoredPosition: {x: 402.86194, y: -635.4535}
+  m_SizeDelta: {x: 805.7239, y: 1270.907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772675616
 MonoBehaviour:
@@ -1465,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 393.13843, y: -668.67017}
+  m_AnchoredPosition: {x: 402.86194, y: -652.9535}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111382615
@@ -1518,12 +1522,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: b8454fa7515965b44be3603b2837a9a2, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1382124296}
+        m_MethodName: testStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

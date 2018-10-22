@@ -428,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.69266, y: -986.0736}
+  m_AnchoredPosition: {x: 405.01175, y: -964.5803}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424745358
@@ -551,7 +551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.69266, y: -881.0736}
+  m_AnchoredPosition: {x: 405.01175, y: -859.5803}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880444695
@@ -725,6 +725,7 @@ GameObject:
   - component: {fileID: 1382124295}
   - component: {fileID: 1382124294}
   - component: {fileID: 1382124293}
+  - component: {fileID: 1382124296}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -792,6 +793,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1382124296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382124292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a36c12aa48254f7ebbe8e95c6810640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  time: 0
+  hp: 0
+  path: Assets/Resources/test.txt
 --- !u!1 &1384535793
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.69266, y: -776.0736}
+  m_AnchoredPosition: {x: 405.01175, y: -754.5803}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657324550
@@ -1179,8 +1195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.69266, y: -653.5736}
-  m_SizeDelta: {x: 783.3853, y: 1307.1472}
+  m_AnchoredPosition: {x: 405.01175, y: -632.0803}
+  m_SizeDelta: {x: 810.0235, y: 1264.1606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772675616
 MonoBehaviour:
@@ -1453,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.69266, y: -671.0736}
+  m_AnchoredPosition: {x: 405.01175, y: -649.5803}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111382615
@@ -1506,12 +1522,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: b8454fa7515965b44be3603b2837a9a2, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1382124296}
+        m_MethodName: checkStartGameButtonTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

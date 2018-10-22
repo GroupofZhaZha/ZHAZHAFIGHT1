@@ -216,4 +216,8 @@ public class botMonsterController : MonoBehaviour {
     public void backToGame(){
         SceneManager.LoadScene("Game");
     }
+
+    public static void resetBotMonster(){
+        botList = new List<Monster>();
+    }
 }

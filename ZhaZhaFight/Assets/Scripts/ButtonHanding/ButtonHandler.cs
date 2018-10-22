@@ -12,8 +12,8 @@ public class ButtonHandler : MonoBehaviour {
 	public void PlayGameButtonHandler()
     {
         PlayerPrefs.SetInt("hp", 30);
-        PlayerPrefs.SetFloat("time", 10f);
-        PlayerPrefs.SetInt("gold", 1000);
+        PlayerPrefs.SetFloat("time", 20f);
+        PlayerPrefs.SetInt("gold", 2000);
         PlayerPrefs.SetInt("currentId", 0);
 
         wildMonsterController.resetOwnMonsterList();

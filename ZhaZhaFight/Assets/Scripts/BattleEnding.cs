@@ -16,12 +16,15 @@ public class BattleEnding : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         if (done)
         {
             if (countDown <= 0)
             {
+                countDown += 2;
                 SceneManager.LoadScene("Game");
+                PlayerPrefs.SetFloat("time", 20);
+                botMonsterController.resetBotMonster();
             }
             countDown -= Time.deltaTime;
             return;

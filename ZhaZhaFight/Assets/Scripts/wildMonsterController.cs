@@ -47,6 +47,10 @@ public class wildMonsterController : MonoBehaviour {
 
         list = new List<Monster>();
         ownList = new List<Monster>();
+
+        gb.SetActive(false);
+
+
         TextAsset monstertext = Resources.Load("monster", typeof(TextAsset)) as TextAsset;
         
         string[] data = monstertext.text.Split('\n');
@@ -54,7 +58,7 @@ public class wildMonsterController : MonoBehaviour {
         {
             string[] row = data[i].Split(',');
 
-            Monster m = new Monster(0,null,0,0,0,0,0);
+            Monster m = new Monster(0, null, 0, 0, 0, 0, 0);
 
             int.TryParse(row[0], out m.id);
             m.monsterName = row[1];
@@ -66,9 +70,8 @@ public class wildMonsterController : MonoBehaviour {
 
 
             list.Add(m);
+            print(list.Count);
         }
-
-        gb.SetActive(false);
 
 
 
@@ -115,6 +118,28 @@ public class wildMonsterController : MonoBehaviour {
                 else if(hit.collider.gameObject.tag == "monster3")
                 {
                     currentMonster = list[2];
+
+                    monsterName.text = "Name : " + currentMonster.monsterName;
+                    monsterLevel.text = "Lv : " + currentMonster.level.ToString();
+                    monsterDamage.text = "Damage : " + currentMonster.damage.ToString();
+                    monsterArmor.text = "Armor : " + currentMonster.armor.ToString();
+                    monsterPrice.text = "Price : " + currentMonster.price.ToString();
+                    monsterHealth.text = "Health: " + currentMonster.health.ToString();
+                    print("click Monster3");
+                }
+                else if(hit.collider.gameObject.tag=="monster4"){
+                    currentMonster = list[3];
+
+                    monsterName.text = "Name : " + currentMonster.monsterName;
+                    monsterLevel.text = "Lv : " + currentMonster.level.ToString();
+                    monsterDamage.text = "Damage : " + currentMonster.damage.ToString();
+                    monsterArmor.text = "Armor : " + currentMonster.armor.ToString();
+                    monsterPrice.text = "Price : " + currentMonster.price.ToString();
+                    monsterHealth.text = "Health: " + currentMonster.health.ToString();
+                    print("click Monster3");
+                }
+                else if(hit.collider.gameObject.tag=="monster5"){
+                    currentMonster = list[4];
 
                     monsterName.text = "Name : " + currentMonster.monsterName;
                     monsterLevel.text = "Lv : " + currentMonster.level.ToString();

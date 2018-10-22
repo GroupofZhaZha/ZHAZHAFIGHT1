@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Microsoft.VisualStudio;
 public class TimerCounter : MonoBehaviour {
     
     public  Text timerDisplay;
@@ -32,8 +33,6 @@ public class TimerCounter : MonoBehaviour {
     void Update () {
         if (!isPause)
         {
-            
-
             timeLeft = PlayerPrefs.GetFloat("time");
             //print("open time: " + PlayerPrefs.GetFloat("time"));
             timeLeft -= Time.deltaTime;
@@ -47,6 +46,8 @@ public class TimerCounter : MonoBehaviour {
             }
 
         }
-	}
+
+        	}
 
 }
+

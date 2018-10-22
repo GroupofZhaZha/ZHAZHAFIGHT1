@@ -62,30 +62,30 @@ public class myMonsterController : MonoBehaviour {
 
         currentLocation = -1;
 
-        myMonster = new List<Monster>();
-        TextAsset monstertext = Resources.Load("ownList", typeof(TextAsset)) as TextAsset;
-        string[] data = monstertext.text.Split('\n');
-        print(data.Length);
+        myMonster = wildMonsterController.ownList;
+        //TextAsset monstertext = Resources.Load("ownList", typeof(TextAsset)) as TextAsset;
+        //string[] data = monstertext.text.Split('\n');
+        //print(data.Length);
 
-        for (int i = 0; i < data.Length; ++i)
-        {
-            string[] row = data[i].Split(',');
+        //for (int i = 0; i < data.Length; ++i)
+        //{
+        //    string[] row = data[i].Split(',');
 
-            if (row[0]!="")
-            {
-                Monster m = new Monster(0, null, 0, 0, 0, 0, 0);
-                int.TryParse(row[0], out m.id);
-                m.monsterName = row[1];
-                int.TryParse(row[2], out m.level);
-                int.TryParse(row[3], out m.health);
-                int.TryParse(row[4], out m.damage);
-                int.TryParse(row[5], out m.armor);
-                int.TryParse(row[6], out m.price);
+        //    if (row[0]!="")
+        //    {
+        //        Monster m = new Monster(0, null, 0, 0, 0, 0, 0);
+        //        int.TryParse(row[0], out m.id);
+        //        m.monsterName = row[1];
+        //        int.TryParse(row[2], out m.level);
+        //        int.TryParse(row[3], out m.health);
+        //        int.TryParse(row[4], out m.damage);
+        //        int.TryParse(row[5], out m.armor);
+        //        int.TryParse(row[6], out m.price);
 
 
-                myMonster.Add(m);
-            }
-        }                                         //Read data from ownList
+        //        myMonster.Add(m);
+        //    }
+        //}                                         //Read data from ownList
 
         for(int i = 0; i < myMonster.Count; i++)
         {
@@ -224,31 +224,37 @@ public class myMonsterController : MonoBehaviour {
             currentMoney = money;
             PlayerPrefs.SetInt("gold", money);
             gold.text = "Gold : " + PlayerPrefs.GetInt("gold");
-            string[] s = File.ReadAllLines("Assets/Resources/ownList.txt");
-            string[] sub = new string[s.Length - 1];
-            for (int i = 0; i < s.Length; ++i)
-            {
-                if (i < currentLocation)
-                {
-                    sub[i] = s[i];
-                }
-                else if (i > currentLocation)
-                {
-                    sub[i - 1] = s[i];
-                }
-                else
-                {
-                    continue;
-                }
+            //string[] s = File.ReadAllLines("Assets/Resources/ownList.txt");
+            //string[] sub = new string[s.Length - 1];
+            //for (int i = 0; i < s.Length; ++i)
+            //{
+            //    if (i < currentLocation)
+            //    {
+            //        sub[i] = s[i];
+            //    }
+            //    else if (i > currentLocation)
+            //    {
+            //        sub[i - 1] = s[i];
+            //    }
+            //    else
+            //    {
+            //        continue;
+            //    }
+            //}
+
+            //File.WriteAllLines("Assets/Resources/ownList.txt", sub);
+
+            //AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
+
+            for (int i = currentLocation; i < myMonster.Count-1;i++){
+                myMonster[i] = myMonster[i + 1];
             }
 
-            File.WriteAllLines("Assets/Resources/ownList.txt", sub);
+            myMonster.RemoveAt(myMonster.Count - 1);
 
-            AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
-
-            for (int i = currentLocation; i < myMonster.Count-1; i++)
+            for (int i = 0; i < myMonster.Count; i++)
             {
-                Monster x = myMonster[i+1];
+                Monster x = myMonster[i];
                 if (x.monsterName == "Green")
                 {
                     list[i].sprite = firstImage;
@@ -268,8 +274,9 @@ public class myMonsterController : MonoBehaviour {
                     list[i].sprite = fifthImage;
                 }
             }
-            list[myMonster.Count - 1].sprite = blinkImage;
-            myMonster.Remove(myMonster[currentLocation]);
+
+            list[myMonster.Count].sprite = blinkImage;
+            //myMonster.Remove(myMonster[currentLocation]);
 
             currentLocation = -1;
         }

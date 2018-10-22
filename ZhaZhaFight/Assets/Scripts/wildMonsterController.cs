@@ -29,14 +29,13 @@ public class wildMonsterController : MonoBehaviour {
     public int currentMoney;
     public int hp;
 
-    public static List<Monster> ownList; //After catch the monster the monster will add to this list, In the beginning is empty;
+    public static List<Monster> ownList = new List<Monster>(); //After catch the monster the monster will add to this list, In the beginning is empty;
     public int currentId;
 
 
     void Start()
     {
 
-        ownList = new List<Monster>();
         currentId = PlayerPrefs.GetInt("currentId");
 
         hp = PlayerPrefs.GetInt("hp");
@@ -68,7 +67,6 @@ public class wildMonsterController : MonoBehaviour {
             int.TryParse(row[4], out m.damage);
             int.TryParse(row[5], out m.armor);
             int.TryParse(row[6], out m.price);
-
 
             list.Add(m);
             print(list.Count);
@@ -175,7 +173,7 @@ public class wildMonsterController : MonoBehaviour {
             PlayerPrefs.SetInt("gold", totalMoney);
             goldText.text = "Gold : " + totalMoney.ToString();
             ownList.Add(currentMonster);
-            writeData();
+            //writeData();
             currentId++;
             PlayerPrefs.SetInt("currentId", currentId);
             gb.SetActive(true);
@@ -189,21 +187,21 @@ public class wildMonsterController : MonoBehaviour {
 
     }
     
-    void writeData()
-    {
-        string path = "Assets/Resources/ownList.txt";
-        StreamWriter w = new StreamWriter(path, true);
+    //void writeData()
+    //{
+    //    string path = "Assets/Resources/ownList.txt";
+    //    StreamWriter w = new StreamWriter(path, true);
         
-        w.WriteLine(currentId.ToString()+","+currentMonster.monsterName+","+currentMonster.level.ToString()+","
-                    +currentMonster.health.ToString()+","+currentMonster.damage.ToString()+","+currentMonster.armor.ToString()+","
-                    +currentMonster.price.ToString()+",");
-        w.Close();
-        AssetDatabase.ImportAsset(path);
-        Resources.Load(path);
-        TextAsset asset = Resources.Load("ownList",typeof(TextAsset)) as TextAsset;
+    //    w.WriteLine(currentId.ToString()+","+currentMonster.monsterName+","+currentMonster.level.ToString()+","
+    //                +currentMonster.health.ToString()+","+currentMonster.damage.ToString()+","+currentMonster.armor.ToString()+","
+    //                +currentMonster.price.ToString()+",");
+    //    w.Close();
+    //    AssetDatabase.ImportAsset(path);
+    //    Resources.Load(path);
+    //    TextAsset asset = Resources.Load("ownList",typeof(TextAsset)) as TextAsset;
 
-        Debug.Log(asset.text);
-    }
+    //    Debug.Log(asset.text);
+    //}
 
     public void backToGamePanel(){
         PlayerPrefs.SetFloat("time",timeLeft);
@@ -211,5 +209,9 @@ public class wildMonsterController : MonoBehaviour {
         PlayerPrefs.SetInt("hp", hp);
         SceneManager.LoadScene("Game");
 
+    }
+
+    public static void resetOwnMonsterList(){
+        ownList = new List<Monster>();
     }
 }

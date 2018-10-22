@@ -15,12 +15,17 @@ public class ButtonHandler : MonoBehaviour {
         PlayerPrefs.SetFloat("time", 100f);
         PlayerPrefs.SetInt("gold", 10000);
         PlayerPrefs.SetInt("currentId", 0);
+
+        wildMonsterController.resetOwnMonsterList();
+
         SceneManager.LoadScene("Game");
 
-        string[] s = new string[0];
-        File.WriteAllLines("Assets/Resources/ownList.txt", s);
 
-        AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
+        //string[] s = new string[0];
+        //File.WriteAllLines("Assets/Resources/ownList.txt", s);
+
+        //AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
+
 
     }
     public void backToGameScene(){

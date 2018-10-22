@@ -18,11 +18,22 @@ public class MySummons : MonoBehaviour {
             GameObject temp = findMonster(list[i].monsterName);
             Quaternion rotation = findRotation(list[i].monsterName);
             GameObject monster = (GameObject)Instantiate(temp, locations[i].position, rotation);
-            monster.transform.localScale = new Vector3(5f, 5f, 5f);
+            setScale(list[i].monsterName, monster);
             monster.transform.tag = "Ally";
             monster.AddComponent<MyMonster>();
         }
 
+    }
+
+    void setScale(string monsterName, GameObject monster)
+    {
+        if (monsterName.Equals("SickleDragon") || monsterName.Equals("SwordDragon") || monsterName.Equals("AxeDragon"))
+        {
+            monster.transform.localScale = new Vector3(2f, 2f, 2f);
+        } else
+        {
+            monster.transform.localScale = new Vector3(5f, 5f, 5f);
+        }
     }
 
     Quaternion findRotation(string monsterName){

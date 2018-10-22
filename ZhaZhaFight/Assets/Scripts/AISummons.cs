@@ -17,12 +17,24 @@ public class AISummons : MonoBehaviour {
             GameObject temp = go.transform.GetChild(0).gameObject;
             Quaternion rotation = findRotation(temp.name);
             GameObject monster = (GameObject) Instantiate(temp, locations[i].position, rotation);
-            monster.transform.localScale = new Vector3(5f, 5f, 5f);
+            setScale(temp.name, monster);
             monster.tag = "Enemy";
             monster.AddComponent<AIMonster>();
 
         }
         
+    }
+
+    void setScale(string monsterName, GameObject monster)
+    {
+        if (monsterName.Equals("SickleDragon") || monsterName.Equals("SwordDragon") || monsterName.Equals("AxeDragon"))
+        {
+            monster.transform.localScale = new Vector3(2f, 2f, 2f);
+        }
+        else
+        {
+            monster.transform.localScale = new Vector3(5f, 5f, 5f);
+        }
     }
 
     Quaternion findRotation(string monsterName)

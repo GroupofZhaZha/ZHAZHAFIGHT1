@@ -1,55 +1,15 @@
 fileFormatVersion: 2
-guid: 8b883e8c7972242e9ac2d151dc33bc14
+guid: f855d737dfd421a4c9056d84d2f8a48f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
-    100002: Body
-    100004: //RootNode
-    100006: Cube_001
-    100008: Head
-    100010: LeftArm
-    100012: LeftFoot
-    100014: LeftHand
-    100016: LeftKnee
-    100018: LeftLeg
-    100020: RightArm
-    100022: RightFoot
-    100024: RightHand
-    100026: RightKnee
-    100028: RightLeg
-    100030: RootBone
-    100032: ToHead
-    100034: ToLeftFoot
-    100036: ToLeftHand
-    100038: ToRightFoot
-    100040: ToRightHand
-    400000: Armature
-    400002: Body
-    400004: //RootNode
-    400006: Cube_001
-    400008: Head
-    400010: LeftArm
-    400012: LeftFoot
-    400014: LeftHand
-    400016: LeftKnee
-    400018: LeftLeg
-    400020: RightArm
-    400022: RightFoot
-    400024: RightHand
-    400026: RightKnee
-    400028: RightLeg
-    400030: RootBone
-    400032: ToHead
-    400034: ToLeftFoot
-    400036: ToLeftHand
-    400038: ToRightFoot
-    400040: ToRightHand
-    2100000: Material
-    4300000: Cube_001
-    7400000: ArmatureAction
-    9500000: //RootNode
-    13700000: Cube_001
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material.001
+    2100002: Material.002
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -77,35 +37,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: ArmatureAction
-      takeName: ArmatureAction
-      firstFrame: -1
-      lastFrame: 59
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -130,7 +62,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -155,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

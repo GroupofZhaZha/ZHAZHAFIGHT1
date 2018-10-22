@@ -1,6 +1,6 @@
 id,name,level,health,damagae,armor,price
-1,Green,1,200,1000,60,500
-2,Blue,1,160,1200,60,450
-3,Red,1,220,1000,40,550
-4,Pocky,1,400,500,80,500
-5,Duoyu,1,100,200,1,100
+1,SickleDragon,1,200,1000,60,500
+2,SwordDragon,1,160,1200,60,450
+3,AxeDragon,1,220,1000,40,550
+4,Robotman,1,400,500,80,500
+5,PClock,1,100,200,1,100

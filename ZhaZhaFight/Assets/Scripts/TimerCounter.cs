@@ -41,8 +41,9 @@ public class TimerCounter : MonoBehaviour {
             PlayerPrefs.SetFloat("time", timeLeft);
             if (timeLeft <= 0f)
             {
-                SceneManager.LoadScene("Battlefieled");
-                PlayerPrefs.SetFloat("time", 30f);
+                Debug.Log("YEa its bug");
+                SceneManager.LoadScene("Battlefield");
+                PlayerPrefs.SetFloat("time", 0f);
             }
 
         }

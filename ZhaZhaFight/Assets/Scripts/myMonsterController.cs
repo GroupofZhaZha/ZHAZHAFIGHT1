@@ -90,22 +90,22 @@ public class myMonsterController : MonoBehaviour {
         for(int i = 0; i < myMonster.Count; i++)
         {
             Monster x = myMonster[i];
-            if (x.monsterName == "Green")
+            if (x.monsterName == "SickleDragon")
             {
                 list[i].sprite = firstImage;
             }
-            else if(x.monsterName == "Blue")
+            else if(x.monsterName == "SwordDragon")
             {
                 list[i].sprite = secondImage;
             }
-            else if(x.monsterName == "Red")
+            else if(x.monsterName == "AxeDragon")
             {
                 list[i].sprite = thirdImage;
             }
-            else if(x.monsterName == "Pocky"){
+            else if(x.monsterName == "Robotman"){
                 list[i].sprite = fourthImage;
             }
-            else if(x.monsterName == "Duoyu"){
+            else if(x.monsterName == "PClock"){
                 list[i].sprite = fifthImage;
             }
         }
@@ -255,22 +255,22 @@ public class myMonsterController : MonoBehaviour {
             for (int i = 0; i < myMonster.Count; i++)
             {
                 Monster x = myMonster[i];
-                if (x.monsterName == "Green")
+                if (x.monsterName == "SickleDragon")
                 {
                     list[i].sprite = firstImage;
                 }
-                else if (x.monsterName == "Blue")
+                else if (x.monsterName == "SwordDragon")
                 {
                     list[i].sprite = secondImage;
                 }
-                else if (x.monsterName == "Red")
+                else if (x.monsterName == "AxeDragon")
                 {
                     list[i].sprite = thirdImage;
                 }
-                else if (x.monsterName == "Pocky"){
+                else if (x.monsterName == "Robotman"){
                     list[i].sprite = fourthImage;
                 }
-                else if (x.monsterName == "Duoyu"){
+                else if (x.monsterName == "PClock"){
                     list[i].sprite = fifthImage;
                 }
             }

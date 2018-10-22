@@ -12,20 +12,32 @@ public class AISummons : MonoBehaviour {
         locations = new Transform[transform.childCount];
         for (int i = 0; i < locations.Length; i++)
         {
-            if (i != 1) {
-            locations[i] = transform.GetChild(1);
+
+            locations[i] = transform.GetChild(i);
             GameObject temp = go.transform.GetChild(0).gameObject;
-            GameObject monster = (GameObject) Instantiate(temp, locations[i].position, locations[i].rotation);
+            Quaternion rotation = findRotation(temp.name);
+            GameObject monster = (GameObject) Instantiate(temp, locations[i].position, rotation);
             monster.transform.localScale = new Vector3(5f, 5f, 5f);
             monster.tag = "Enemy";
             monster.AddComponent<AIMonster>();
-            }
+
         }
         
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    Quaternion findRotation(string monsterName)
+    {
+        if (monsterName.Equals("SickleDragon") || monsterName.Equals("SwordDragon") || monsterName.Equals("AxeDragon"))
+        {
+            return Quaternion.Euler(new Vector3(0f, 180f, 0f));
+        }
+        else if (monsterName.Equals("PClock"))
+        {
+            return Quaternion.Euler(new Vector3(0f, -90f, 0f));
+        }
+        else
+        {
+            return Quaternion.Euler(new Vector3(0f, 90f, 0f));
+        }
+    }
 }

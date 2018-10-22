@@ -15,4 +15,5 @@ public class MonsterDatabase : MonoBehaviour {
             monsters[i] = transform.GetChild(i);
         }
     }
+    
 }

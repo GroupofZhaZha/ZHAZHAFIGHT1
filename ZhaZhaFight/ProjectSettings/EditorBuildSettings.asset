@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BOT.unity
     guid: 6e4aa32a80df4de45a7fa9042c1ae308
+  - enabled: 1
+    path: Assets/Scenes/Battlefield.unity
+    guid: 39d673500e147224cb1ffd29736ce703
   m_configObjects: {}

@@ -12,14 +12,26 @@ public class AISummons : MonoBehaviour {
         locations = new Transform[transform.childCount];
         for (int i = 0; i < locations.Length; i++)
         {
-            if (i != 1) {
-            locations[i] = transform.GetChild(1);
+            
+            locations[i] = transform.GetChild(i);
             GameObject temp = go.transform.GetChild(0).gameObject;
-            GameObject monster = (GameObject) Instantiate(temp, locations[i].position, locations[i].rotation);
+            GameObject monster;
+            if (temp.name.Equals("Sickledragon") || temp.name.Equals("Sworddragon") || temp.name.Equals("AxeDragon"))
+            {
+                monster = (GameObject)Instantiate(temp, locations[i].position, Quaternion.Euler(new Vector3(0, 180, 0)));
+            }
+            else if (temp.name.Equals("PClock"))
+            {
+                monster = (GameObject)Instantiate(temp, locations[i].position, Quaternion.Euler(new Vector3(0, -90, 0)));
+            }
+            else
+            {
+                monster = (GameObject)Instantiate(temp, locations[i].position, locations[i].rotation);
+            }
             monster.transform.localScale = new Vector3(5f, 5f, 5f);
             monster.tag = "Enemy";
             monster.AddComponent<AIMonster>();
-            }
+            
         }
         
     }

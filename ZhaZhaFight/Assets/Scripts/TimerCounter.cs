@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Microsoft.VisualStudio;
+
 public class TimerCounter : MonoBehaviour {
     
     public  Text timerDisplay;

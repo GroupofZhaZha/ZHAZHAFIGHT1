@@ -16,7 +16,8 @@ public class BattleEnding : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+
         if (done)
         {
             if (countDown <= 0)

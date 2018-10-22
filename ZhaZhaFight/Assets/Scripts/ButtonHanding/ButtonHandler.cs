@@ -13,12 +13,13 @@ public class ButtonHandler : MonoBehaviour {
     {
         PlayerPrefs.SetInt("hp", 30);
         PlayerPrefs.SetFloat("time", 100f);
-        PlayerPrefs.SetInt("gold", 1000);
+        PlayerPrefs.SetInt("gold", 10000);
         PlayerPrefs.SetInt("currentId", 0);
         SceneManager.LoadScene("Game");
 
         string[] s = new string[0];
         File.WriteAllLines("Assets/Resources/ownList.txt", s);
+
         AssetDatabase.ImportAsset("Assets/Resources/ownList.txt");
 
     }

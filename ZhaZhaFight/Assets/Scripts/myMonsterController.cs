@@ -102,6 +102,12 @@ public class myMonsterController : MonoBehaviour {
             {
                 list[i].sprite = thirdImage;
             }
+            else if(x.monsterName == "Pocky"){
+                list[i].sprite = fourthImage;
+            }
+            else if(x.monsterName == "Duoyu"){
+                list[i].sprite = fifthImage;
+            }
         }
     }
 
@@ -255,10 +261,10 @@ public class myMonsterController : MonoBehaviour {
                 {
                     list[i].sprite = thirdImage;
                 }
-                else if (x.monsterName == "Duoyu"){
+                else if (x.monsterName == "Pocky"){
                     list[i].sprite = fourthImage;
                 }
-                else if (x.monsterName == "Pocky"){
+                else if (x.monsterName == "Duoyu"){
                     list[i].sprite = fifthImage;
                 }
             }

@@ -35,6 +35,8 @@ public class wildMonsterController : MonoBehaviour {
 
     void Start()
     {
+
+        ownList = new List<Monster>();
         currentId = PlayerPrefs.GetInt("currentId");
 
         hp = PlayerPrefs.GetInt("hp");
@@ -46,7 +48,6 @@ public class wildMonsterController : MonoBehaviour {
         hpText.text = "HP : " + hp.ToString();
 
         list = new List<Monster>();
-        ownList = new List<Monster>();
 
         gb.SetActive(false);
 
@@ -181,6 +182,8 @@ public class wildMonsterController : MonoBehaviour {
             AlertText.text = "Catch Successful";
             currentMoney = totalMoney;
 
+            print("Own List Size : "+ownList.Count.ToString());
+
         }
 
 
@@ -196,6 +199,7 @@ public class wildMonsterController : MonoBehaviour {
                     +currentMonster.price.ToString()+",");
         w.Close();
         AssetDatabase.ImportAsset(path);
+        Resources.Load(path);
         TextAsset asset = Resources.Load("ownList",typeof(TextAsset)) as TextAsset;
 
         Debug.Log(asset.text);

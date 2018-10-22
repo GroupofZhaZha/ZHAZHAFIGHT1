@@ -7,7 +7,7 @@ public class MyMonster : MonoBehaviour {
 
     public float healthpoint = 100f;
     private float MAXHEALTH = 100f;
-    public float range = 10f;
+    public float range = 12f;
     public float speed = 10f;
     private Transform target;
     public string enemyTag = "Enemy";
@@ -20,8 +20,6 @@ public class MyMonster : MonoBehaviour {
 	void Start () {
         anim = transform.GetComponent<Animator>();  
         healthbar = transform.GetChild(0).GetComponent<Image>();
-        healthbar.type = Image.Type.Filled;
-        return;
     }
 
     // Update is called once per frame

@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/main.unity
     guid: 73c7b8e4923513c48b8f519ed78c80cf
@@ -27,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WildMonsters.unity
     guid: 52358a05de1af4fd984ca7b6843d20c4
   - enabled: 1
-    path: Assets/Scenes/WildMonsters2.unity
-    guid: 41f6ad62bfce24a4486e4deb49ce1ac3
-  - enabled: 1
     path: Assets/Scenes/BOT.unity
     guid: 6e4aa32a80df4de45a7fa9042c1ae308
+  - enabled: 1
+    path: Assets/Scenes/Battlefield.unity
+    guid: 39d673500e147224cb1ffd29736ce703
   m_configObjects: {}

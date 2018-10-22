@@ -41,7 +41,7 @@ public class TimerCounter : MonoBehaviour {
             PlayerPrefs.SetFloat("time", timeLeft);
             if (timeLeft <= 0f)
             {
-                SceneManager.LoadScene("WildMonsters");
+                SceneManager.LoadScene("Battlefieled");
                 PlayerPrefs.SetFloat("time", 30f);
             }
 

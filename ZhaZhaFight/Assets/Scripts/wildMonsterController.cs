@@ -36,7 +36,15 @@ public class wildMonsterController : MonoBehaviour {
     void Start()
     {
         currentId = PlayerPrefs.GetInt("currentId");
+
         hp = PlayerPrefs.GetInt("hp");
+        timeLeft = PlayerPrefs.GetFloat("time");
+        currentMoney = PlayerPrefs.GetInt("gold");
+
+        timeText.text = "Time : " + timeLeft.ToString("f0") + "s";
+        goldText.text = "Gold : " + currentMoney.ToString();
+        hpText.text = "HP : " + hp.ToString();
+
         list = new List<Monster>();
         ownList = new List<Monster>();
         TextAsset monstertext = Resources.Load("monster", typeof(TextAsset)) as TextAsset;
@@ -62,19 +70,15 @@ public class wildMonsterController : MonoBehaviour {
 
         gb.SetActive(false);
 
-        timeText.text = "Time : "+PlayerPrefs.GetFloat("time").ToString("f0")+"s";
-        goldText.text = "Gold : "+PlayerPrefs.GetInt("gold").ToString();
-        hpText.text = "HP : "+PlayerPrefs.GetInt("hp").ToString();
 
-        timeLeft = PlayerPrefs.GetFloat("time");
-        currentMoney = PlayerPrefs.GetInt("gold");
+
     }
     void Update () {
 
         timeLeft -= Time.deltaTime;
         if(timeLeft<=0f){
             PlayerPrefs.SetFloat("time", timeLeft);
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Battlefield");
         }
         timeText.text = "Time : " + timeLeft.ToString("f0")+"s";
 

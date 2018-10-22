@@ -109,7 +109,7 @@ public class myMonsterController : MonoBehaviour {
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0f)
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Battlefield");
             PlayerPrefs.SetFloat("time", timeLeft);
         }
     }
@@ -265,6 +265,7 @@ public class myMonsterController : MonoBehaviour {
         PlayerPrefs.SetInt("gold", currentMoney);
         PlayerPrefs.SetFloat("time", timeLeft);
         PlayerPrefs.SetInt("hp", hp);
+        SceneManager.LoadScene("Game");
     }
 
 }

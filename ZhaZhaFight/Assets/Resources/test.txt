@@ -52,3 +52,51 @@ Expection is equal to the actual
 2 : After catch the money of your own. Expection : Has 900 Gold, Actual : Has 900
 Expection is equal to the actual
 
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 800 Gold, Actual : Has 800
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 700 Gold, Actual : Has 700
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 600 Gold, Actual : Has 600
+Expection is equal to the actual
+
+3 : After catch, number of monster in the list . Expection : Has 2 Monsters, Actual : Has 2 Monsters
+Expection is equal to the actual
+
+4 : After catch the money of your own. Expection : Has 500 Gold, Actual : Has 500
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 400 Gold, Actual : Has 400
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 300 Gold, Actual : Has 300
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 200 Gold, Actual : Has 200
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own. Expection : Has 100 Gold, Actual : Has 100
+Expection is equal to the actual
+

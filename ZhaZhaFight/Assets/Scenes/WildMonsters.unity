@@ -427,11 +427,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12008,6 +12008,7 @@ MonoBehaviour:
   list: []
   currentMonster: {fileID: 0}
   gb: {fileID: 347719831}
+  canvas: {fileID: 1242849630}
   AlertText: {fileID: 285526357}
   goldText: {fileID: 524061637}
   timeText: {fileID: 1127392682}

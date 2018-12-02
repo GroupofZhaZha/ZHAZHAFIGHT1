@@ -20,6 +20,7 @@ public class wildMonsterController : MonoBehaviour {
     public Monster currentMonster;
 
     public GameObject gb;
+    public GameObject canvas;
     public Text AlertText;
 
     public Text goldText;
@@ -157,19 +158,25 @@ public class wildMonsterController : MonoBehaviour {
     {
 
         int totalMoney = PlayerPrefs.GetInt("gold") - currentMonster.price;
-
         if (totalMoney < 0)
         {
+            canvas.SetActive(false);
             gb.SetActive(true);
             AlertText.text = "No enough Money!!!!!";
+
         }
         else if (ownList.Count == 6)
         {
+            canvas.SetActive(false);
+
             gb.SetActive(true);
             AlertText.text = "Your Monster is Full!!!!!";
+
         }
         else
         {
+            canvas.SetActive(false);
+
             PlayerPrefs.SetInt("gold", totalMoney);
             goldText.text = "Gold : " + totalMoney.ToString();
             ownList.Add(currentMonster);
@@ -185,6 +192,11 @@ public class wildMonsterController : MonoBehaviour {
         }
 
 
+    }
+
+    public void okListener(){
+        gb.SetActive(false);
+        canvas.SetActive(true);
     }
     
     //void writeData()

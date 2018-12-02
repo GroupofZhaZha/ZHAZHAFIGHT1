@@ -617,6 +617,81 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 252006168}
   m_CullTransparentMesh: 0
+--- !u!1 &396179927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396179928}
+  - component: {fileID: 396179930}
+  - component: {fileID: 396179929}
+  m_Layer: 5
+  m_Name: Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &396179928
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396179927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 534544370}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 405, y: -40}
+  m_SizeDelta: {x: 263.33334, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &396179929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396179927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &396179930
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396179927}
+  m_CullTransparentMesh: 0
 --- !u!1 &410776770
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +939,7 @@ RectTransform:
   m_LocalScale: {x: 0.97942, y: 0.97942, z: 0.97942}
   m_Children:
   - {fileID: 886908486}
+  - {fileID: 396179928}
   - {fileID: 1993418626}
   m_Father: {fileID: 758155308}
   m_RootOrder: 0
@@ -1582,8 +1658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202.5, y: -40}
-  m_SizeDelta: {x: 405, y: 80}
+  m_AnchoredPosition: {x: 136.66667, y: -40}
+  m_SizeDelta: {x: 273.33334, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886908487
 MonoBehaviour:
@@ -3400,12 +3476,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534544370}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 602.5, y: -40}
-  m_SizeDelta: {x: 395, y: 80}
+  m_AnchoredPosition: {x: 668.3334, y: -40}
+  m_SizeDelta: {x: 263.33334, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993418627
 MonoBehaviour:
@@ -3685,7 +3761,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2099161627}
+      - m_Target: {fileID: 0}
         m_MethodName: sellTest
         m_Mode: 1
         m_Arguments:
@@ -3696,7 +3772,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2099161627}
+      - m_Target: {fileID: 0}
         m_MethodName: afterSellMoneyTest
         m_Mode: 1
         m_Arguments:
@@ -3754,7 +3830,6 @@ GameObject:
   - component: {fileID: 2099161624}
   - component: {fileID: 2099161623}
   - component: {fileID: 2099161626}
-  - component: {fileID: 2099161627}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3859,26 +3934,9 @@ MonoBehaviour:
   health: {fileID: 1657639167}
   armor: {fileID: 37029457}
   price: {fileID: 943912199}
+  time: {fileID: 396179929}
   gold: {fileID: 1993418627}
   currentMoney: 0
   timeLeft: 0
   hp: 0
   currentLocation: 0
---- !u!114 &2099161627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2099161622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a36c12aa48254f7ebbe8e95c6810640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gold: 0
-  time: 0
-  hp: 0
-  path: Assets/Resources/test.txt
-  monsterListSize: 0
-  currentGold: 0
-  currentMonsterList: []

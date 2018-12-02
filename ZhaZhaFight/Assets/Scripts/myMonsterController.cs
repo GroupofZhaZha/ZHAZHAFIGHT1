@@ -32,6 +32,7 @@ public class myMonsterController : MonoBehaviour {
     public Text health;
     public Text armor;
     public Text price;
+    public Text time;
    
     public Text gold;
     public int currentMoney;
@@ -44,7 +45,12 @@ public class myMonsterController : MonoBehaviour {
         timeLeft = PlayerPrefs.GetFloat("time");
         hp = PlayerPrefs.GetInt("hp");
 
+        gold.alignment = TextAnchor.MiddleCenter;
         gold.text = "Gold : " + currentMoney.ToString();
+        time.alignment = TextAnchor.MiddleCenter;
+        time.text = "Time : " + timeLeft.ToString("f0") + "s";
+
+
         list = new List<Image>();
         list.Add(img1);
         list.Add(img2);
@@ -120,6 +126,9 @@ public class myMonsterController : MonoBehaviour {
             SceneManager.LoadScene("Battlefield");
             PlayerPrefs.SetFloat("time", timeLeft);
         }
+        time.alignment = TextAnchor.MiddleCenter;
+        time.text = "Time : " + timeLeft.ToString("f0") + "s";
+
     }
 
 

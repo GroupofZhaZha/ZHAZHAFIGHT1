@@ -43,6 +43,10 @@ public class wildMonsterController : MonoBehaviour {
         timeLeft = PlayerPrefs.GetFloat("time");
         currentMoney = PlayerPrefs.GetInt("gold");
 
+        goldText.alignment = TextAnchor.MiddleCenter;
+        timeText.alignment = TextAnchor.MiddleCenter;
+        hpText.alignment = TextAnchor.MiddleCenter;
+
         timeText.text = "Time : " + timeLeft.ToString("f0") + "s";
         goldText.text = "Gold : " + currentMoney.ToString();
         hpText.text = "HP : " + hp.ToString();

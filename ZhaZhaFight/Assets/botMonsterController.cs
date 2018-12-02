@@ -34,6 +34,7 @@ public class botMonsterController : MonoBehaviour {
     public Text price;
     public Text health;
 
+    public Text time;
     public Text gold;
     public int currentMoney;
     public int hp;
@@ -45,6 +46,9 @@ public class botMonsterController : MonoBehaviour {
         timeLeft = PlayerPrefs.GetFloat("time");
         hp = PlayerPrefs.GetInt("hp");
 
+        gold.alignment = TextAnchor.MiddleCenter;
+        time.alignment = TextAnchor.MiddleCenter;
+        time.text = "Time : " + timeLeft.ToString("f0") + "s";
         gold.text = "Gold : " + currentMoney.ToString();
 
         
@@ -129,6 +133,8 @@ public class botMonsterController : MonoBehaviour {
             SceneManager.LoadScene("Battlefield");
             PlayerPrefs.SetFloat("time", timeLeft);
         }
+        time.text = "Time : " + timeLeft.ToString("f0") + "s";
+
     }
 
 

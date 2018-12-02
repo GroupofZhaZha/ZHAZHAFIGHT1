@@ -35,7 +35,6 @@ public class BattleEnding : MonoBehaviour {
                 botMonsterController.resetBotMonster();
                 int gold = PlayerPrefs.GetInt("gold");
                 PlayerPrefs.SetInt("gold", gold + 1000);
-
             }
             countDown -= Time.deltaTime;
             return;
@@ -54,12 +53,12 @@ public class BattleEnding : MonoBehaviour {
             int aihp = PlayerPrefs.GetInt("aihp");
             //PlayerPrefs.SetInt("aihp", aihp - GameObject.FindGameObjectsWithTag("Ally").Length);
         }
-        if(PlayerPrefs.GetInt("aihp")==0){
+        if(PlayerPrefs.GetInt("aihp")<=0){
             end = true;
             result.text = "Victory";
         }
     
-        if(PlayerPrefs.GetInt("hp")==0){
+        if(PlayerPrefs.GetInt("hp")<=0){
             end = true;
             result.text = "Defeated";
         }

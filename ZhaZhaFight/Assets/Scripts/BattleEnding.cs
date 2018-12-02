@@ -14,7 +14,7 @@ public class BattleEnding : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //EndPanel.SetActive(false);
+        EndPanel.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -33,6 +33,8 @@ public class BattleEnding : MonoBehaviour {
                 SceneManager.LoadScene("Game");
                 PlayerPrefs.SetFloat("time", 20);
                 botMonsterController.resetBotMonster();
+                int gold = PlayerPrefs.GetInt("gold");
+                PlayerPrefs.SetInt("gold", gold + 1000);
 
             }
             countDown -= Time.deltaTime;

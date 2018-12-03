@@ -10,8 +10,10 @@ public class Monster : MonoBehaviour {
     public int health;
     public int armor;
     public int price;
+    public int sell;
+    public int goldUpgrade;
 
-    public Monster(int _id, string _monsterName,int _level,int _damage,int _armor,int _health,int _price)
+    public Monster(int _id, string _monsterName,int _level,int _damage,int _armor,int _health,int _price,int _sell,int _goldUpgrade)
     {
         id = _id;
         monsterName = _monsterName;
@@ -20,5 +22,7 @@ public class Monster : MonoBehaviour {
         health = _health;
         armor = _armor;
         price = _price;
+        sell = _sell;
+        goldUpgrade = _goldUpgrade;
     }
 }

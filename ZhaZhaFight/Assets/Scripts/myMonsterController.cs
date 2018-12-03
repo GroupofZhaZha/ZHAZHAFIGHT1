@@ -9,7 +9,7 @@ public class myMonsterController : MonoBehaviour {
 
     // Use this for initialization
     public List<Monster> myMonster;
-
+    public List<Monster> totalMonster;
     public Sprite firstImage;
     public Sprite secondImage;
     public Sprite thirdImage;
@@ -30,21 +30,34 @@ public class myMonsterController : MonoBehaviour {
     public Text level;
     public Text damage;
     public Text health;
-    public Text armor;
-    public Text price;
+    public Text upgrader;
+    public Text sellPrice;
+    public Text time;
    
     public Text gold;
     public int currentMoney;
     public float timeLeft;
     public int hp;
 
+    public GameObject canvas;
+    public GameObject main;
+
+    public Text alert;
     public int currentLocation;
     void Start () {
+        alert.alignment = TextAnchor.MiddleCenter;
+        canvas.SetActive(false);
+        totalMonster = ButtonHandler.totalMonster;
         currentMoney = PlayerPrefs.GetInt("gold");
         timeLeft = PlayerPrefs.GetFloat("time");
         hp = PlayerPrefs.GetInt("hp");
 
+        gold.alignment = TextAnchor.MiddleCenter;
         gold.text = "Gold : " + currentMoney.ToString();
+        time.alignment = TextAnchor.MiddleCenter;
+        time.text = "Time : " + timeLeft.ToString("f0") + "s";
+
+
         list = new List<Image>();
         list.Add(img1);
         list.Add(img2);
@@ -120,6 +133,9 @@ public class myMonsterController : MonoBehaviour {
             SceneManager.LoadScene("Battlefield");
             PlayerPrefs.SetFloat("time", timeLeft);
         }
+        time.alignment = TextAnchor.MiddleCenter;
+        time.text = "Time : " + timeLeft.ToString("f0") + "s";
+
     }
 
 
@@ -136,8 +152,8 @@ public class myMonsterController : MonoBehaviour {
             n.text = "Name : " + currentMonster.monsterName;
             level.text = "Lv : " + currentMonster.level.ToString();
             damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
+            upgrader.text = "Upgrade Money : " + currentMonster.goldUpgrade.ToString();
+            sellPrice.text = "Sell Price : " + currentMonster.sell.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
             currentLocation = 0;
         }
@@ -150,8 +166,8 @@ public class myMonsterController : MonoBehaviour {
             n.text = "Name : " + currentMonster.monsterName;
             level.text = "Lv : " + currentMonster.level.ToString();
             damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
+            upgrader.text = "Upgrade Money : " + currentMonster.goldUpgrade.ToString();
+            sellPrice.text = "Sell Price : " + currentMonster.sell.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
             currentLocation = 1;
         }
@@ -164,8 +180,8 @@ public class myMonsterController : MonoBehaviour {
             n.text = "Name : " + currentMonster.monsterName;
             level.text = "Lv : " + currentMonster.level.ToString();
             damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
+            upgrader.text = "Upgrade Money : " + currentMonster.goldUpgrade.ToString();
+            sellPrice.text = "Sell Price : " + currentMonster.sell.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
             currentLocation = 2;
         }
@@ -178,8 +194,8 @@ public class myMonsterController : MonoBehaviour {
             n.text = "Name : " + currentMonster.monsterName;
             level.text = "Lv : " + currentMonster.level.ToString();
             damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
+            upgrader.text = "Upgrade Money : " + currentMonster.goldUpgrade.ToString();
+            sellPrice.text = "Sell Price : " + currentMonster.sell.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
             currentLocation = 3;
         }
@@ -192,8 +208,8 @@ public class myMonsterController : MonoBehaviour {
             n.text = "Name : " + currentMonster.monsterName;
             level.text = "Lv : " + currentMonster.level.ToString();
             damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
+            upgrader.text = "Upgrade Money : " + currentMonster.goldUpgrade.ToString();
+            sellPrice.text = "Sell Price : " + currentMonster.sell.ToString();
             health.text = "Health: " + currentMonster.health.ToString();
             currentLocation = 4;
         }
@@ -206,9 +222,9 @@ public class myMonsterController : MonoBehaviour {
             n.text = "Name : " + currentMonster.monsterName;
             level.text = "Lv : " + currentMonster.level.ToString();
             damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            upgrader.text = "Upgrade Money : " + currentMonster.goldUpgrade.ToString();
+            sellPrice.text = "Sell Price : " + currentMonster.sell.ToString();
+            health.text = "Health : " + currentMonster.health.ToString();
             currentLocation = 5;
         }
     }
@@ -220,7 +236,7 @@ public class myMonsterController : MonoBehaviour {
         }
         else
         {
-            int money = PlayerPrefs.GetInt("gold") + myMonster[currentLocation].price;
+            int money = PlayerPrefs.GetInt("gold") + myMonster[currentLocation].sell;
             currentMoney = money;
             PlayerPrefs.SetInt("gold", money);
             gold.text = "Gold : " + PlayerPrefs.GetInt("gold");
@@ -289,4 +305,69 @@ public class myMonsterController : MonoBehaviour {
         SceneManager.LoadScene("Game");
     }
 
+
+    public void upgrade(){
+        if(currentMoney >= myMonster[currentLocation].goldUpgrade){
+            int money = PlayerPrefs.GetInt("gold") - myMonster[currentLocation].goldUpgrade;
+            currentMoney = money;
+            PlayerPrefs.SetInt("gold", money);
+            gold.text = "Gold:" + money;
+            int d = myMonster[currentLocation].id;
+            int l = myMonster[currentLocation].level;
+
+
+            if(l<18){
+                for (int i = 0; i < totalMonster.Count; i++)
+                {
+                    if (totalMonster[i].level == (l + 1) && totalMonster[i].id == d)
+                    {
+                        myMonster[currentLocation] = totalMonster[i];
+                        canvas.SetActive(true);
+                        main.SetActive(false);
+                        alert.text = "Upgrade Successful";
+                        if (currentLocation == 0)
+                        {
+                            checkInformationButton1();
+                        }
+                        if (currentLocation == 1)
+                        {
+                            checkInformationButton2();
+                        }
+                        if (currentLocation == 2)
+                        {
+                            checkInformationButton3();
+                        }
+                        if (currentLocation == 3)
+                        {
+                            checkInformationButton4();
+                        }
+                        if (currentLocation == 4)
+                        {
+                            checkInformationButton5();
+                        }
+                        if (currentLocation == 5)
+                        {
+                            checkInformationButton6();
+                        }
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                alert.text = "You Monster Is Full Level";
+                canvas.SetActive(true);
+                main.SetActive(false);
+            }
+        }
+        else{
+            alert.text = "You don't have enough money to upgrade";
+            canvas.SetActive(true);
+            main.SetActive(false);
+        }
+    }
+    public void okButton(){
+        canvas.SetActive(false);
+        main.SetActive(true);
+    }
 }

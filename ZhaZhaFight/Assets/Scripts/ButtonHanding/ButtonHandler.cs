@@ -9,8 +9,9 @@ using UnityEngine.UI;
 public class ButtonHandler : MonoBehaviour {
 
     public GameObject PausePanelUI;
+    public static List<Monster> totalMonster = new List<Monster>();
 
-	public void PlayGameButtonHandler()
+    public void PlayGameButtonHandler()
     {
         PlayerPrefs.SetInt("hp", 30);
         PlayerPrefs.SetFloat("time", 20f);
@@ -21,6 +22,26 @@ public class ButtonHandler : MonoBehaviour {
 
         SceneManager.LoadScene("Game");
 
+        TextAsset monstertext = Resources.Load("totalMonster", typeof(TextAsset)) as TextAsset;
+
+        string[] data = monstertext.text.Split('\n');
+        for (int i = 1; i < data.Length; ++i)
+        {
+            string[] row = data[i].Split(',');
+
+            Monster m = new Monster(0, null, 0, 0, 0, 0, 0, 0, 0);
+
+            int.TryParse(row[0], out m.id);
+            m.monsterName = row[1];
+            int.TryParse(row[2], out m.level);
+            int.TryParse(row[3], out m.health);
+            int.TryParse(row[4], out m.damage);
+            int.TryParse(row[5], out m.armor);
+            int.TryParse(row[6], out m.price);
+            int.TryParse(row[7], out m.sell);
+            int.TryParse(row[8], out m.goldUpgrade);
+            totalMonster.Add(m);
+        }
 
         //string[] s = new string[0];
         //File.WriteAllLines("Assets/Resources/ownList.txt", s);

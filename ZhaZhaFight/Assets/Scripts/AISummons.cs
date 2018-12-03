@@ -14,7 +14,7 @@ public class AISummons : MonoBehaviour {
         {
 
             locations[i] = transform.GetChild(i);
-            GameObject temp = go.transform.GetChild(0).gameObject;
+            GameObject temp = go.transform.GetChild(3).gameObject;
             Quaternion rotation = findRotation(temp.name);
             GameObject monster = (GameObject) Instantiate(temp, locations[i].position, rotation);
             setScale(temp.name, monster);
@@ -41,15 +41,15 @@ public class AISummons : MonoBehaviour {
     {
         if (monsterName.Equals("SickleDragon") || monsterName.Equals("SwordDragon") || monsterName.Equals("AxeDragon"))
         {
-            return Quaternion.Euler(new Vector3(0f, 180f, 0f));
+            return Quaternion.Euler(new Vector3(0f, 0f, 0f));
         }
         else if (monsterName.Equals("PClock"))
         {
-            return Quaternion.Euler(new Vector3(0f, -90f, 0f));
+            return Quaternion.Euler(new Vector3(0f, 90f, 0f));
         }
         else
         {
-            return Quaternion.Euler(new Vector3(0f, 90f, 0f));
+            return Quaternion.Euler(new Vector3(0f, -90f, 0f));
         }
     }
 }

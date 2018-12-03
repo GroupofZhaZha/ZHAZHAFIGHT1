@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
 using System.IO;
+using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class ButtonHandler : MonoBehaviour {
         PlayerPrefs.SetFloat("time", 20f);
         PlayerPrefs.SetInt("gold", 2000);
         PlayerPrefs.SetInt("currentId", 0);
-
+        PlayerPrefs.SetInt("aihp", 30);
         wildMonsterController.resetOwnMonsterList();
 
         SceneManager.LoadScene("Game");

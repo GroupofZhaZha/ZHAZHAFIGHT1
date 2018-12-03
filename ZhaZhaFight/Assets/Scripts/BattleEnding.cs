@@ -35,6 +35,8 @@ public class BattleEnding : MonoBehaviour {
                 botMonsterController.resetBotMonster();
                 int gold = PlayerPrefs.GetInt("gold");
                 PlayerPrefs.SetInt("gold", gold + 1000);
+
+                BotMonsters.botMonster = new List<Monster>();
             }
             countDown -= Time.deltaTime;
             return;

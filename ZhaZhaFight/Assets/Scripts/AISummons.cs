@@ -32,11 +32,11 @@ public class AISummons : MonoBehaviour {
     {
         if (monsterName.Equals("SickleDragon") || monsterName.Equals("SwordDragon") || monsterName.Equals("AxeDragon"))
         {
-            monster.transform.localScale = new Vector3(2f, 2f, 2f);
+            monster.transform.localScale = new Vector3(4f, 4f, 4f);
         }
         else
         {
-            monster.transform.localScale = new Vector3(5f, 5f, 5f);
+            monster.transform.localScale = new Vector3(10f, 10f, 10f);
         }
     }
 

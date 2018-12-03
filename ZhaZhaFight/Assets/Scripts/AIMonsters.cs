@@ -110,9 +110,10 @@ public class AIMonster : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    public  void damageReceive(float damage)
+    public void damageReceive(float damage)
     {
         healthpoint -= damage;
+        Debug.Log(damage);
     }
 
 }

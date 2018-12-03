@@ -428,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 343.84094, y: -1077.0303}
+  m_AnchoredPosition: {x: 383.13315, y: -1000.675}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424745358
@@ -551,7 +551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 343.84094, y: -972.0303}
+  m_AnchoredPosition: {x: 383.13315, y: -895.675}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880444695
@@ -726,6 +726,7 @@ GameObject:
   - component: {fileID: 1382124294}
   - component: {fileID: 1382124293}
   - component: {fileID: 1382124296}
+  - component: {fileID: 1382124297}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -805,6 +806,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PausePanelUI: {fileID: 0}
+--- !u!114 &1382124297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382124292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105cc887cfed14a3ba7327706f633574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  time: 0
+  hp: 0
+  path: Assets/Resources/test.txt
+  monsterListSize: 0
+  currentMonsterList: []
+  noEnough: 0
 --- !u!1 &1384535793
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 343.84094, y: -867.0303}
+  m_AnchoredPosition: {x: 383.13315, y: -790.675}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657324550
@@ -1192,8 +1211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 343.84094, y: -744.5303}
-  m_SizeDelta: {x: 687.6819, y: 1489.0605}
+  m_AnchoredPosition: {x: 383.13315, y: -668.175}
+  m_SizeDelta: {x: 766.2663, y: 1336.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772675616
 MonoBehaviour:
@@ -1466,7 +1485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 343.84094, y: -762.0303}
+  m_AnchoredPosition: {x: 383.13315, y: -685.675}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111382615
@@ -1519,7 +1538,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1382124297}
         m_MethodName: checkStartGameButtonTest
         m_Mode: 1
         m_Arguments:

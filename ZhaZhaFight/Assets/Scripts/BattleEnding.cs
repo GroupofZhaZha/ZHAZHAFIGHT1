@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class BattleEnding : MonoBehaviour {
 
     private float countDown = 2f;
-    private bool done = false;
-    private bool end = false;
+    public static bool done = false;
+    public static bool end = false;
+    public static int lost = -1;
     public Text result;
     public GameObject EndPanel;
 
@@ -37,6 +38,7 @@ public class BattleEnding : MonoBehaviour {
                 PlayerPrefs.SetInt("gold", gold + 1000);
 
                 BotMonsters.botMonster = new List<Monster>();
+
             }
             countDown -= Time.deltaTime;
             return;
@@ -47,6 +49,7 @@ public class BattleEnding : MonoBehaviour {
             done = true;
             int playerhp = PlayerPrefs.GetInt("hp");
             PlayerPrefs.SetInt("hp", playerhp - GameObject.FindGameObjectsWithTag("Enemy").Length);
+            lost = 0;
 
         }
         if (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0)
@@ -54,6 +57,7 @@ public class BattleEnding : MonoBehaviour {
             done = true;
             int aihp = PlayerPrefs.GetInt("aihp");
             PlayerPrefs.SetInt("aihp", aihp - GameObject.FindGameObjectsWithTag("Ally").Length);
+            lost = 1;
         }
         if(PlayerPrefs.GetInt("aihp")<=0){
             end = true;

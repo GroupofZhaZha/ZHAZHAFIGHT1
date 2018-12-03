@@ -43,7 +43,8 @@ public class myMonsterController : MonoBehaviour {
     public GameObject main;
 
     public Text alert;
-    public int currentLocation;
+    public static int currentLocation;
+    public static Monster updateMonster;
     void Start () {
         alert.alignment = TextAnchor.MiddleCenter;
         canvas.SetActive(false);
@@ -236,6 +237,7 @@ public class myMonsterController : MonoBehaviour {
         }
         else
         {
+            updateMonster = myMonster[currentLocation];
             int money = PlayerPrefs.GetInt("gold") + myMonster[currentLocation].sell;
             currentMoney = money;
             PlayerPrefs.SetInt("gold", money);
@@ -307,7 +309,9 @@ public class myMonsterController : MonoBehaviour {
 
 
     public void upgrade(){
-        if(currentMoney >= myMonster[currentLocation].goldUpgrade){
+        updateMonster = myMonster[currentLocation];
+
+        if (currentMoney >= myMonster[currentLocation].goldUpgrade){
             int money = PlayerPrefs.GetInt("gold") - myMonster[currentLocation].goldUpgrade;
             currentMoney = money;
             PlayerPrefs.SetInt("gold", money);

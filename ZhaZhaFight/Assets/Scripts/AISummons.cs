@@ -10,17 +10,20 @@ public class AISummons : MonoBehaviour {
     // Use this for initialization
     void Start () {
         locations = new Transform[transform.childCount];
-        for (int i = 0; i < locations.Length; i++)
+        List<Monster> list = botMonsterController.botList;
+        for (int i = 0; i < list.Count; i++)
         {
-
             locations[i] = transform.GetChild(i);
-            GameObject temp = go.transform.GetChild(3).gameObject;
+            GameObject temp = findMonster(list[i].monsterName);
             Quaternion rotation = findRotation(temp.name);
             GameObject monster = (GameObject) Instantiate(temp, locations[i].position, rotation);
             setScale(temp.name, monster);
             monster.tag = "Enemy";
             monster.AddComponent<AIMonster>();
-
+            monster.GetComponent<AIMonster>().healthpoint = list[i].health;
+            monster.GetComponent<AIMonster>().MAXHEALTH = list[i].health;
+            monster.GetComponent<AIMonster>().attack = list[i].damage;
+            monster.GetComponent<AIMonster>().defense = list[i].armor;
         }
         
     }
@@ -51,5 +54,17 @@ public class AISummons : MonoBehaviour {
         {
             return Quaternion.Euler(new Vector3(0f, -90f, 0f));
         }
+    }
+
+    GameObject findMonster(string monsterName)
+    {
+        for (int i = 0; i < go.transform.childCount; i++)
+        {
+            if (go.transform.GetChild(i).name.Equals(monsterName))
+            {
+                return go.transform.GetChild(i).gameObject;
+            }
+        }
+        return null;
     }
 }

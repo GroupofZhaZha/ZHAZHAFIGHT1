@@ -51,7 +51,7 @@ public class BattleEnding : MonoBehaviour {
         {
             done = true;
             int aihp = PlayerPrefs.GetInt("aihp");
-            //PlayerPrefs.SetInt("aihp", aihp - GameObject.FindGameObjectsWithTag("Ally").Length);
+            PlayerPrefs.SetInt("aihp", aihp - GameObject.FindGameObjectsWithTag("Ally").Length);
         }
         if(PlayerPrefs.GetInt("aihp")<=0){
             end = true;

@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class MyMonster : MonoBehaviour {
 
     public float healthpoint = 100f;
-    private float MAXHEALTH = 100f;
-    public float range = 12f;
-    public float speed = 10f;
+    public float attack = 0;
+    public float MAXHEALTH = 0;
+    public float defense = 0;
+
+    private float range = 12f;
+    private float speed = 10f;
     private Transform target;
     public string enemyTag = "Enemy";
     private Animator anim;
@@ -53,7 +56,12 @@ public class MyMonster : MonoBehaviour {
                 attackCooldown -= Time.deltaTime;
                 return;
             }
-            target.GetComponent<AIMonster>().damageReceive(10);
+            if(target == null)
+            {
+                return;
+            }
+            float damage = attack - target.GetComponent<AIMonster>().defense;
+            target.GetComponent<AIMonster>().damageReceive(damage);
             attackCooldown = 2.1f;
 
         }

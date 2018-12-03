@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEditor;
 using UnityEngine.SceneManagement;
-public class myMonsterController : MonoBehaviour {
+public class myMonsterController:MonoBehaviour {
 
     // Use this for initialization
     public List<Monster> myMonster;
@@ -44,7 +44,7 @@ public class myMonsterController : MonoBehaviour {
         timeLeft = PlayerPrefs.GetFloat("time");
         hp = PlayerPrefs.GetInt("hp");
 
-        gold.text = "Gold : " + currentMoney.ToString();
+        gold.text = "Gold:" + currentMoney.ToString();
         list = new List<Image>();
         list.Add(img1);
         list.Add(img2);
@@ -133,12 +133,12 @@ public class myMonsterController : MonoBehaviour {
         if (myMonster.Count > 0)
         {
             Monster currentMonster = myMonster[0];
-            n.text = "Name : " + currentMonster.monsterName;
-            level.text = "Lv : " + currentMonster.level.ToString();
-            damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            n.text = "Name:\n" + currentMonster.monsterName;
+            level.text = "Lv:\n" + currentMonster.level.ToString();
+            damage.text = "Damage:\n" + currentMonster.damage.ToString();
+            armor.text = "Armor:\n" + currentMonster.armor.ToString();
+            price.text = "Price:\n" + currentMonster.price.ToString();
+            health.text = "Health: \n" + currentMonster.health.ToString();
             currentLocation = 0;
         }
     }
@@ -147,12 +147,12 @@ public class myMonsterController : MonoBehaviour {
         if (myMonster.Count > 1)
         {
             Monster currentMonster = myMonster[1];
-            n.text = "Name : " + currentMonster.monsterName;
-            level.text = "Lv : " + currentMonster.level.ToString();
-            damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            n.text = "Name:\n" + currentMonster.monsterName;
+            level.text = "Lv:\n" + currentMonster.level.ToString();
+            damage.text = "Damage:\n" + currentMonster.damage.ToString();
+            armor.text = "Armor:\n" + currentMonster.armor.ToString();
+            price.text = "Price:\n" + currentMonster.price.ToString();
+            health.text = "Health: \n" + currentMonster.health.ToString();
             currentLocation = 1;
         }
     }
@@ -161,12 +161,12 @@ public class myMonsterController : MonoBehaviour {
         if (myMonster.Count > 2)
         {
             Monster currentMonster = myMonster[2];
-            n.text = "Name : " + currentMonster.monsterName;
-            level.text = "Lv : " + currentMonster.level.ToString();
-            damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            n.text = "Name:\n" + currentMonster.monsterName;
+            level.text = "Lv:\n" + currentMonster.level.ToString();
+            damage.text = "Damage:\n" + currentMonster.damage.ToString();
+            armor.text = "Armor:\n" + currentMonster.armor.ToString();
+            price.text = "Price:\n" + currentMonster.price.ToString();
+            health.text = "Health: \n" + currentMonster.health.ToString();
             currentLocation = 2;
         }
     }
@@ -175,12 +175,12 @@ public class myMonsterController : MonoBehaviour {
         if (myMonster.Count > 3)
         {
             Monster currentMonster = myMonster[3];
-            n.text = "Name : " + currentMonster.monsterName;
-            level.text = "Lv : " + currentMonster.level.ToString();
-            damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            n.text = "Name:\n" + currentMonster.monsterName;
+            level.text = "Lv:\n" + currentMonster.level.ToString();
+            damage.text = "Damage:\n" + currentMonster.damage.ToString();
+            armor.text = "Armor:\n" + currentMonster.armor.ToString();
+            price.text = "Price:\n" + currentMonster.price.ToString();
+            health.text = "Health:\n" + currentMonster.health.ToString();
             currentLocation = 3;
         }
     }
@@ -189,12 +189,12 @@ public class myMonsterController : MonoBehaviour {
         if (myMonster.Count > 4)
         {
             Monster currentMonster = myMonster[4];
-            n.text = "Name : " + currentMonster.monsterName;
-            level.text = "Lv : " + currentMonster.level.ToString();
-            damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            n.text = "Name:\n" + currentMonster.monsterName;
+            level.text = "Lv:\n" + currentMonster.level.ToString();
+            damage.text = "Damage:\n" + currentMonster.damage.ToString();
+            armor.text = "Armor:\n" + currentMonster.armor.ToString();
+            price.text = "Price:\n" + currentMonster.price.ToString();
+            health.text = "Health: \n" + currentMonster.health.ToString();
             currentLocation = 4;
         }
     }
@@ -203,13 +203,56 @@ public class myMonsterController : MonoBehaviour {
         if (myMonster.Count > 5)
         {
             Monster currentMonster = myMonster[5];
-            n.text = "Name : " + currentMonster.monsterName;
-            level.text = "Lv : " + currentMonster.level.ToString();
-            damage.text = "Damage : " + currentMonster.damage.ToString();
-            armor.text = "Armor : " + currentMonster.armor.ToString();
-            price.text = "Price : " + currentMonster.price.ToString();
-            health.text = "Health: " + currentMonster.health.ToString();
+            n.text = "Name:\n" + currentMonster.monsterName;
+            level.text = "Lv:\n" + currentMonster.level.ToString();
+            damage.text = "Damage:\n" + currentMonster.damage.ToString();
+            armor.text = "Armor:\n" + currentMonster.armor.ToString();
+            price.text = "Price:\n" + currentMonster.price.ToString();
+            health.text = "Health: \n" + currentMonster.health.ToString();
             currentLocation = 5;
+        }
+    }
+
+    public void upgradeMonsterButton()
+    {
+        if (currentMoney >= myMonster[currentLocation].price)
+        {
+            int money = PlayerPrefs.GetInt("gold") - myMonster[currentLocation].price;
+            currentMoney = money;
+            PlayerPrefs.SetInt("gold", money);
+            gold.text = "Gold:" + PlayerPrefs.GetInt("gold");
+
+            myMonster[currentLocation].price *= 2;
+            myMonster[currentLocation].level += 1;
+            myMonster[currentLocation].damage *= 2;
+            myMonster[currentLocation].armor *= 2;
+            myMonster[currentLocation].health *= 2;
+
+            if (currentLocation == 0)
+            {
+                checkInformationButton1();
+            }
+            if (currentLocation == 1)
+            {
+                checkInformationButton2();
+            }
+            if (currentLocation == 2)
+            {
+                checkInformationButton3();
+            }
+            if (currentLocation == 3)
+            {
+                checkInformationButton4();
+            }
+            if (currentLocation == 4)
+            {
+                checkInformationButton5();
+            }
+            if (currentLocation == 5)
+            {
+                checkInformationButton6();
+            }
+
         }
     }
 
@@ -223,7 +266,7 @@ public class myMonsterController : MonoBehaviour {
             int money = PlayerPrefs.GetInt("gold") + myMonster[currentLocation].price;
             currentMoney = money;
             PlayerPrefs.SetInt("gold", money);
-            gold.text = "Gold : " + PlayerPrefs.GetInt("gold");
+            gold.text = "Gold:" + PlayerPrefs.GetInt("gold");
             //string[] s = File.ReadAllLines("Assets/Resources/ownList.txt");
             //string[] sub = new string[s.Length - 1];
             //for (int i = 0; i < s.Length; ++i)

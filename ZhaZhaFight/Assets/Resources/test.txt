@@ -94,3 +94,12 @@ Gold Match, HP Match, Time Match,
 3 : After Sell, number of monster in the list . Expection : Has -1 Monsters, Actual : Has 0 Monsters
 Expection Failed
 
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list . Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+

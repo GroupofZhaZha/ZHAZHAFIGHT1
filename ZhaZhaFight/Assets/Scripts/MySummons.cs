@@ -21,6 +21,10 @@ public class MySummons : MonoBehaviour {
             setScale(list[i].monsterName, monster);
             monster.transform.tag = "Ally";
             monster.AddComponent<MyMonster>();
+            monster.GetComponent<MyMonster>().healthpoint = list[i].health;
+            monster.GetComponent<MyMonster>().MAXHEALTH = list[i].health;
+            monster.GetComponent<MyMonster>().attack = list[i].damage;
+            monster.GetComponent<MyMonster>().defense = list[i].armor;
         }
 
     }

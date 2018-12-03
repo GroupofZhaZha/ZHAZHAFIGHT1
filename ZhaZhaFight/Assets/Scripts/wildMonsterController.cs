@@ -36,7 +36,7 @@ public class wildMonsterController : MonoBehaviour {
 
     void Start()
     {
-
+        AlertText.alignment = TextAnchor.MiddleCenter;
         currentId = PlayerPrefs.GetInt("currentId");
 
         hp = PlayerPrefs.GetInt("hp");
@@ -63,7 +63,7 @@ public class wildMonsterController : MonoBehaviour {
         {
             string[] row = data[i].Split(',');
 
-            Monster m = new Monster(0, null, 0, 0, 0, 0, 0);
+            Monster m = new Monster(0, null, 0, 0, 0, 0, 0,0,0);
 
             int.TryParse(row[0], out m.id);
             m.monsterName = row[1];
@@ -72,9 +72,10 @@ public class wildMonsterController : MonoBehaviour {
             int.TryParse(row[4], out m.damage);
             int.TryParse(row[5], out m.armor);
             int.TryParse(row[6], out m.price);
-
+            int.TryParse(row[7], out m.sell);
+            int.TryParse(row[8], out m.goldUpgrade);
             list.Add(m);
-            print(list.Count);
+            //print(list.Count);
         }
 
 

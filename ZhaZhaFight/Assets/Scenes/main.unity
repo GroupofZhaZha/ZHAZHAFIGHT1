@@ -428,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.01175, y: -964.5803}
+  m_AnchoredPosition: {x: 502.0167, y: -842.44324}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424745358
@@ -551,7 +551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.01175, y: -859.5803}
+  m_AnchoredPosition: {x: 502.0167, y: -737.44324}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880444695
@@ -808,6 +808,9 @@ MonoBehaviour:
   time: 0
   hp: 0
   path: Assets/Resources/test.txt
+  monsterListSize: 0
+  currentGold: 0
+  currentMonsterList: []
 --- !u!1 &1384535793
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.01175, y: -754.5803}
+  m_AnchoredPosition: {x: 502.0167, y: -632.44324}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657324550
@@ -1195,8 +1198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.01175, y: -632.0803}
-  m_SizeDelta: {x: 810.0235, y: 1264.1606}
+  m_AnchoredPosition: {x: 502.0167, y: -509.94327}
+  m_SizeDelta: {x: 1004.0334, y: 1019.88654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772675616
 MonoBehaviour:
@@ -1469,7 +1472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.01175, y: -649.5803}
+  m_AnchoredPosition: {x: 502.0167, y: -527.44324}
   m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111382615

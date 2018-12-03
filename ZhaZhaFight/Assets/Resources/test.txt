@@ -100,3 +100,57 @@ Expection is equal to the actual
 2 : After catch the money of your own. Expection : Has 100 Gold, Actual : Has 100
 Expection is equal to the actual
 
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+3 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+

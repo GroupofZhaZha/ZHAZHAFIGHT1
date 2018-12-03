@@ -53,14 +53,14 @@ public class botMonsterController : MonoBehaviour {
 
         
         if (botList.Count==0){
-            TextAsset monstertext = Resources.Load("monster", typeof(TextAsset)) as TextAsset;
+            TextAsset monstertext = Resources.Load("totalMonster", typeof(TextAsset)) as TextAsset;
 
             string[] data = monstertext.text.Split('\n');
             for (int i = 1; i < data.Length; ++i)
             {
                 string[] row = data[i].Split(',');
 
-                Monster m = new Monster(0, null, 0, 0, 0, 0, 0);
+                Monster m = new Monster(0, null, 0, 0, 0, 0, 0,0,0);
 
                 int.TryParse(row[0], out m.id);
                 m.monsterName = row[1];
@@ -69,7 +69,8 @@ public class botMonsterController : MonoBehaviour {
                 int.TryParse(row[4], out m.damage);
                 int.TryParse(row[5], out m.armor);
                 int.TryParse(row[6], out m.price);
-
+                int.TryParse(row[7], out m.sell);
+                int.TryParse(row[8], out m.goldUpgrade);
                 monsterList.Add(m);
             }
 
@@ -79,7 +80,7 @@ public class botMonsterController : MonoBehaviour {
 
             for (int i = 0; i < numberOfMonster;++i){
 
-                botList.Add(monsterList[Random.Range(0, 5)]);
+                botList.Add(monsterList[Random.Range(0, 90)]);
                 print("Bot Count : " + botList.Count);
             }
         }

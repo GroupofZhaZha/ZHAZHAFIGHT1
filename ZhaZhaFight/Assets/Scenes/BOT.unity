@@ -644,6 +644,7 @@ MonoBehaviour:
   armor: {fileID: 2026295815}
   price: {fileID: 446671609}
   health: {fileID: 340380716}
+  time: {fileID: 231363765}
   gold: {fileID: 1125618427}
   currentMoney: 0
   hp: 0

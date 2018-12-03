@@ -126,7 +126,7 @@ public class test : MonoBehaviour {
     public void afterSellMoneyTest(){
         w = new StreamWriter(path, true);
 
-        Monster m = new Monster(0,null,0,0,0,0,0);
+        Monster m = new Monster(0,null,0,0,0,0,0,0,0);
         for (int i = 0; i < wildMonsterController.ownList.Count;++i){
             if(currentMonsterList[i]!=wildMonsterController.ownList[i]){
                 m = currentMonsterList[i];

@@ -13,6 +13,6 @@ public class AiHpUpdate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         int hp = PlayerPrefs.GetInt("aihp");
-        aiHp.text = "AiHP: " + hp.ToString();
+        aiHp.text = "AI HP: " + hp.ToString();
 	}
 }

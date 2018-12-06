@@ -11,7 +11,7 @@ public class AIMonster : MonoBehaviour
     public float MAXHEALTH = 0;
     public float defense = 0;
 
-    private float range = 12f;
+    private float range = 30f;
     private float speed = 10f;
     private Transform target;
     public string enemyTag = "Ally";

@@ -1,0 +1,231 @@
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1500 Gold, Actual : Has 1500
+Expection is equal to the actual
+
+4 : After catch, number of monster in the list should increase. Expection : Has 2 Monsters, Actual : Has 2 Monsters
+Expection is equal to the actual
+
+5 : After catch the money of your own should decrease. Expection : Has 1300 Gold, Actual : Has 1300
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+1 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own should decrease. Expection : Has 1800 Gold, Actual : Has 1800
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1550 Gold, Actual : Has 1550
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+4 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1850 Gold, 2 Level. Actual : Has 1850 Gold, 2 Level
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1800 Gold, Actual : Has 1800
+Expection is equal to the actual
+
+4 : After catch, number of monster in the list should increase. Expection : Has 2 Monsters, Actual : Has 2 Monsters
+Expection is equal to the actual
+
+5 : After catch the money of your own should decrease. Expection : Has 1700 Gold, Actual : Has 1700
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1550 Gold, Actual : Has 1550
+Expection is equal to the actual
+
+4 : After a battle finish, Player lose the game and decrease HP. Expection 26 HP. Actual : 26 HP.
+Expection is equal to the actual
+
+5 : After a battle finish, increasing 1000 golds. Expection : 2550 Gold. Actual : 2550 Gold.
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+2 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+1 : After a battle finish, AI lose the game and decrease HP. Expection 29 HP. Actual : 29 HP.
+Expection is equal to the actual
+
+2 : After a battle finish, increasing 1000 golds. Expection : 2900 Gold. Actual : 2900 Gold.
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1550 Gold, Actual : Has 1550
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1550 Gold, Actual : Has 1550
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+3 : After catch the money of your own should decrease. Expection : Has 1900 Gold, Actual : Has 1900
+Expection is equal to the actual
+
+4 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1850 Gold, 2 Level. Actual : Has 1850 Gold, 2 Level
+Expection is equal to the actual
+
+5 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1780 Gold, 3 Level. Actual : Has 1780 Gold, 3 Level
+Expection is equal to the actual
+
+6 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1690 Gold, 4 Level. Actual : Has 1690 Gold, 4 Level
+Expection is equal to the actual
+
+7 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1570 Gold, 5 Level. Actual : Has 1570 Gold, 5 Level
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+2 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
+3 : After catch, number of monster in the list should increase. Expection : Has 1 Monsters, Actual : Has 1 Monsters
+Expection is equal to the actual
+
+4 : After catch the money of your own should decrease. Expection : Has 1550 Gold, Actual : Has 1550
+Expection is equal to the actual
+
+5 : After catch, number of monster in the list should increase. Expection : Has 2 Monsters, Actual : Has 2 Monsters
+Expection is equal to the actual
+
+6 : After catch the money of your own should decrease. Expection : Has 1450 Gold, Actual : Has 1450
+Expection is equal to the actual
+
+7 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1350 Gold, 2 Level. Actual : Has 1350 Gold, 2 Level
+Expection is equal to the actual
+
+8 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 1200 Gold, 3 Level. Actual : Has 1200 Gold, 3 Level
+Expection is equal to the actual
+
+9 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 900 Gold, 4 Level. Actual : Has 900 Gold, 4 Level
+Expection is equal to the actual
+
+10 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 850 Gold, 2 Level. Actual : Has 850 Gold, 2 Level
+Expection is equal to the actual
+
+11 : Click Upgrade button to upgrade monster, the gold will decrease and monster's level up. Expection : Has 400 Gold, 5 Level. Actual : Has 400 Gold, 5 Level
+Expection is equal to the actual
+
+1 : After a battle finish, AI lose the game and decrease HP. Expection 30 HP. Actual : 30 HP.
+Expection is equal to the actual
+
+2 : After a battle finish, increasing 1000 golds. Expection : 1400 Gold. Actual : 1400 Gold.
+Expection is equal to the actual
+
+1 : Start Game . Expection : Gold - 2000, HP - 30, Time - 20s . Actual : Gold - 2000, HP - 30, Time - 20s.
+Gold Match, HP Match, Time Match, 
+
